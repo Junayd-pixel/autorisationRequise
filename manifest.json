@@ -1,0 +1,31 @@
+{
+
+  "manifest_version": 2,
+  "name": "Modal",
+  "version": "1.0",
+
+  "description": "Vérifier l'age",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["modal.js"]
+    }
+  ],
+
+  "browser_action": {
+    "browser_style": true,
+    "default_icon": {
+      "48" :"icons/border-48.png"
+    },
+    "default_title": "Block",
+    "default_popup": "index.html"
+  },
+    "permissions": [
+      "storage"
+    ]
+}
